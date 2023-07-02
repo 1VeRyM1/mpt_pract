@@ -1,13 +1,21 @@
 'use strict'
 
-let incr = 10, decr = 10;
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', "");
 
-// ++incr;
-// --decr;
+let personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+};
 
-console.log(++incr);  
-console.log(--decr);
+const questionA = prompt('Один из последних просмотренных фильмов?', ""),
+      questionB = +prompt('На сколько оцените его?', ""),
+      questionC = prompt('Один из последних просмотренных фильмов?', ""),
+      questionD = +prompt('На сколько оцените его?', "");
 
-console.log(5 != 2);
+personalMovieDB.movies[questionA] = questionB;
+personalMovieDB.movies[questionC] = questionD;
 
-
+console.log(personalMovieDB);
